@@ -921,3 +921,25 @@ input[type=range] {
 #tools .panel-cursor {
   cursor: pointer;
 }
+@media print{
+  #pulldown, #search-container, #header form, #mouseposition, #footer a,
+  [alt=small_logo], [ga-geolocation], button, [ga-time-selector], .ol-zoomslider {
+    display: none !important;
+  }
+  [alt=big_logo] {
+    display: block !important;
+  }
+  #header {
+    box-shadow: none !important;
+    height: 110px;
+  }
+  [ga-map] {
+    border: 1px solid lightgray;
+    top: 120px !important;
+    width: 650px !important;/* A4 portrait width */ 
+    height: 650px; /* only useful for chrome and safari, never set !important for
+    the height because Firefox could use it and so the map printed will not be resized
+    keeping the ratio */
+  }
+}
+
